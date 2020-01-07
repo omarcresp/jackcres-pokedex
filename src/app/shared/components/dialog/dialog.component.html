@@ -1,0 +1,8 @@
+<div class="dialog-container" [ngClass]="{'dialog-display-hide': !enabled}">
+  <div class="dialog-card">
+    <div class="dialog-content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+  <div class="dialog-close-area" (click)="closeModal()"></div>
+</div>
