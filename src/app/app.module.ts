@@ -11,6 +11,7 @@ import { LanguageService } from './core/services/language/language.service';
 import { StorageService } from './core/services/storage/storage.service';
 import { SharedModule } from './shared/shared.module';
 import { FirebaseModule } from './shared/firebase/firebase.module';
+import { PokedexService } from './core/services/pokedex/pokedex.service';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FirebaseModule } from './shared/firebase/firebase.module';
   providers: [
     LanguageService,
     StorageService,
+    PokedexService,
   ],
   bootstrap: [AppComponent]
 })
