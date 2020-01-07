@@ -1,7 +1,7 @@
 <h1>{{ 'LABEL.HELLO' | translate }}</h1>
 
-<ol>
-  <li *ngFor="let item of pokedexs">
+<mat-list role="list">
+  <mat-list-item *ngFor="let item of pokedexs" role="listitem">
     <a [routerLink]="item.url.slice(25)">{{ item.name }}</a>
-  </li>
-</ol>
+  </mat-list-item>
+</mat-list>
