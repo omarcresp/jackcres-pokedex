@@ -1,1 +1,7 @@
 <h1>{{ 'LABEL.HELLO' | translate }}</h1>
+
+<ol>
+  <li *ngFor="let item of pokedexs">
+    <a [routerLink]="item.url.slice(25)">{{ item.name }}</a>
+  </li>
+</ol>

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { IPokedexData } from '../../interfaces/pokedex/pokedex';
+import { IPokedexData, IPokedexDetail } from '../../interfaces/pokedex/pokedex';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +19,10 @@ export class PokedexService {
 
   getAll(): Observable<IPokedexData> {
     return <Observable<IPokedexData>>this.http.get(this.url);
+  }
+
+  getById(id: string): Observable<IPokedexDetail> {
+    return <Observable<IPokedexDetail>>this.http.get(`${this.url}/${id}`);
   }
 
   buildPath(): void {
